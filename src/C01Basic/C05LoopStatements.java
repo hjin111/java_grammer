@@ -77,7 +77,7 @@ public class C05LoopStatements {
 //
 //    }
 
-        /// 2~10까지 출력을 for문을 활용하여 출력
+        /// 2~10까지 출력을 for 문을 활용하여 출력
 //        for (int i = 2; i <= 10; i++) {
 //            System.out.println(i);
 //        }
@@ -114,19 +114,19 @@ public class C05LoopStatements {
 //            // 소수구하기 : 1과 자기자신을 제외한 숫자로 나누어지지 않는 수
 //            // 1~24까지 수 중에 소수를 출력
 //            // 1, 2, 3, 5, 7
-//            // 사용자가 입력한 특정값이 소수인지 아닌지
-//            Scanner sc = new Scanner(System.in);
-//            int input = sc.nextInt();
-//            boolean trueOrNot = false;
-//            for(int i = 2; i < input; i++){
-//               if(input % i == 0){
-//                   trueOrNot = true;
-//                   break;
-//               }
-//            }
-//            if(trueOrNot == false) {
-//                System.out.println(input + " 은 소수입니다.");
-//            }
+            // 사용자가 입력한 특정값이 소수인지 아닌지
+            Scanner sc = new Scanner(System.in);
+            int input = sc.nextInt();
+            boolean trueOrNot = false;
+            for(int i = 2; i < input; i++){ // i * i 이 input 보다 작을 때까지만 나눠보면 된다.
+               if(input % i == 0){
+                   trueOrNot = true;
+                   break;
+               }
+            }
+            if(trueOrNot == false) {
+                System.out.println(input + " 은 소수입니다.");
+            }
 //
 //            // 홀수만 출력하기 1 ~ 10 까지
 //            for(int i = 1; i <= 10; i++){
