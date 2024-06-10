@@ -262,7 +262,7 @@ public class C06String {
         sb1.delete(17, sb1.length());
         System.out.println(sb1);
 
-        // StringBuilder
+        // StringBuilder -> 시간 단축
         // String += < StringBuffer < StringBuilder
         // StringBuilder는 스레드 safe X
         StringBuilder sb2 = new StringBuilder();
