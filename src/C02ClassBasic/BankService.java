@@ -45,6 +45,7 @@ public class BankService {
                 String accountNumber = sc.nextLine();
                 BankAccount bankAccount = new BankAccount(accountNumber);
                 bankAccounts.add(bankAccount); // 리스트에 담아버리기
+                System.out.println(BankAccount.static_id);
             }else if(number == 2){
                 System.out.println("계좌번호를 입력해주세요");
                 String accountNumber = sc.nextLine();
@@ -84,10 +85,15 @@ public class BankService {
 }
 
 class BankAccount {
+
+    static Long static_id = 0L; // 클래스 변수
+    private Long id;
     private String accountNumber;
     private int balance;
 
     BankAccount(String accountNumber) {
+        static_id += 1; // this 는 객체 그 자신을 의미한다고 했으니깐 빼야 한다.
+        id = static_id;
         // accountNumber를 초기화
         this.accountNumber = accountNumber;
     }
@@ -113,11 +119,16 @@ class BankAccount {
         System.out.println("현재 잔액은 " + this.balance);
     }
 
+    // getter
     public String getAccountNumber() {
         return accountNumber;
     }
 
     public int getBalance() {
         return balance;
+    }
+
+    public Long getId() {
+        return id;
     }
 }
