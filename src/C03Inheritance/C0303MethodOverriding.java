@@ -8,7 +8,7 @@ public class C0303MethodOverriding {
 
         // 상속관계일때 부모클래스타입을 자식클래스 객체의 타입으로 지정 가능
         // animal 클래스에 정의된 메서드만 사용가능하도록 제약 발생
-        Animal myDog2 = new Dog();
+        Animal myDog2 = new Dog(); // Animal 에서 사용되는 메서드 밖에 못쓴다.
         // myDog2.sound2(); // 컴파일 에러 발생
     }
 }
