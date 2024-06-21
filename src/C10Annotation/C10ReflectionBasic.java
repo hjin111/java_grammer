@@ -24,7 +24,7 @@ public class C10ReflectionBasic {
         // 객체생성 2-2)
         Calculator cal2 = Calculator.class.getConstructor(String.class).newInstance("Casio"); // new Calculator("Casio") 한거랑 똑같음
         // 메서드 생성
-        Method cal2Method = Calculator.class.getMethod("sayHello");
+        Method cal2Method = Calculator.class.getMethod("sayHello"); // sayHello 메서드명 찾기
         cal2Method.invoke(cal2); // cal2 대상을 실행한다 라는 뜻
 
         // 리플렉션 기술을 통해 필드 접근 및 수정
